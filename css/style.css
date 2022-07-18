@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+/* 
+Same box model can be achieved through position: 'fixed' property for nav and search bar too.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+/*-- Navigation Bar --*/
+.navbar {
+  width: 280px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 4px 0px 16px rgba(30, 30, 30, 0.08);
+  position: relative;
+  z-index: 3;
+}
+.navbar__header {
+  width: 100%;
+  height: 60px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+.navbar__header img {
+  margin-right: 20px;
+}
+.navbar__header h1 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+}
+.navigation__list {
+  margin-top: 30px;
+  width: 100%;
+  padding: 0 15px;
+  list-style: none;
+}
+.navigation__item {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.navigation__item img {
+  margin-right: 18px;
+  width: 15px;
+}
+.dropdown-ico {
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navigation__item--selected {
+  font-weight: 700;
+}
+.navigation__sublist {
+  list-style: none;
+  margin-left: 5px;
+  padding-left: 30px;
+  margin-top: 10px;
+  border-left: 1px solid #dbe0e8;
+  display: none;
+}
+.navigation__subitems {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  cursor: pointer;
+}
+.navigation__subitems:not(:last-child) {
+  padding-bottom: 10px;
+}
+.isDisp {
+  display: block;
+}
+
+/* Primary container */
+.primary-container {
+  width: 100%;
+  height: 100%;
+}
+/* Search bar */
+.header-primary {
+  width: 100%;
+  height: 60px;
+  background: #ffffff;
+  box-shadow: 4px 0px 16px 10px rgba(30, 30, 30, 0.08);
+  padding: 0 25px 0 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.header-primary img {
+  cursor: pointer;
+}
+#header-primary__input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  outline: none;
+}
+#header-primary__input::placeholder {
+  color: #e8e8e8;
+  font-weight: 400;
+}
+#bell-img {
+  transform: translateY(-2px);
+  margin-right: 10px;
+}
+
+/* Content Container */
+.content-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+.content-container__img {
+  width: 100%;
+  object-fit: cover;
+}
+/* Search Screen  */
+.search-screen {
+  position: fixed;
+  left: 240px;
+  top: 60px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 50px;
+  display: none;
+}
+.search-screen__container {
+  display: flex;
+}
+.search__primary_heading {
+  font-weight: 700;
+  font-size: 22px;
+  color: #000;
+  opacity: 0.5;
+}
+.sma-container {
+  width: 70%;
+  margin-right: 80px;
+}
+.sma-container__container {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+.sma__card {
+  width: 347px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+/* Selecting child from n=3 and so on. */
+.sma__card:nth-child(n + 3) {
+  margin-top: 50px;
+}
+/* --- */
+.sma_card__img_box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sma_card__img_box h1 {
+  font-weight: 700;
+  font-size: 22px;
+}
+.sma__card img {
+  width: 50px;
+  height: 50px;
+}
+.sma__card__container {
+  width: 100%;
+  padding-left: 20px;
+}
+.card__primary_heading {
+  font-weight: 700;
+  font-size: 16px;
+}
+.card__sub_heading {
+  font-weight: 400;
+  font-size: 12px;
+  color: #000;
+  opacity: 0.5;
+}
+.btn {
+  outline: none;
+  border: none;
+  background: none;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btn--orange {
+  border: 1px solid #ff6059;
+  color: #ff6059;
+}
+.btn--green {
+  border: 1px solid #1aab2b;
+  color: #1aab2b;
+}
+.quick-action__container {
+  width: 30%;
+}
+.quick-action__container ul {
+  margin-top: 30px;
+  list-style: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+.quick-action__container ul li:not(:first-child) {
+  margin-top: 30px;
+}

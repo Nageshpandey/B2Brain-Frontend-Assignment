@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <nav class="navbar">
+        <div class="navbar__header">
+          <img src="./assets/logo.svg" alt="B2Brain" />
+          <h1>B2Brain</h1>
+        </div>
+        <ul class="navigation__list">
+          <li class="navigation__item navigation__item--selected">
+            <img src="./assets/home.svg" />
+            Dashboard
+          </li>
+          <li class="navigation__item">
+            <img src="./assets/star.svg" />
+            Intels
+          </li>
+          
+          <li class="navigation__item">
+            <img src="./assets/user.svg" />
+            Leads
+          </li>
+          <li class="navigation__item" id="dropdown-account">
+            <label for="" class="navigation__item">
+              <img src="./assets/building.svg" />
+              Accounts
+            </label>
+            <img
+              src="./assets/drop_arrow.svg"
+              class="dropdown-ico"
+              id="dropdown-ico"
+            />
+            <ul class="navigation__sublist" id="account-submenu">
+              <li class="navigation__subitems">Manage all</li>
+              <li class="navigation__subitems">Track new accounts</li>
+              <li class="navigation__subitems">Bulk Import</li>
+            </ul>
+          </li>
+          <li class="navigation__item" id="dropdown-pref">
+            <label for="" class="navigation__item">
+              <img src="./assets/preferences.svg" />
+              Preferences
+            </label>
+            <img
+              src="./assets/drop_arrow.svg"
+              class="dropdown-ico"
+              id="drop-pref"
+            />
+            <ul class="navigation__sublist" id="pref-submenu">
+              <li class="navigation__subitems">Product Focus</li>
+              <li class="navigation__subitems">Intel Preferences</li>
+              <li class="navigation__subitems">Lead Persona</li>
+            </ul>
+          </li>
+          <li class="navigation__item">
+            <img src="./assets/integration.svg" />
+            Integration
+          </li>
+          <li class="navigation__item">
+            <img src="./assets/team.svg" />
+            Team
+          </li>
+          <li class="navigation__item">
+            <img src="./assets/help.svg" />
+            Help / Support
+          </li>
+        </ul>
+      </nav>
+      <section class="primary-container">
+        <header class="header-primary">
+          <img src="./assets/cross.svg" alt="cancel" id="close" />
+          <input
+            type="text"
+            name=""
+            id="header-primary__input"
+            placeholder="Search by account name or website"
+          />
+          <img src="./assets/bell.svg" alt="notification" id="bell-img" />
+          <img src="./assets/profile.svg" alt="profile" />
+        </header>
+        <section class="content-container">
+          <img
+            src="./assets/hero-image.png"
+            alt=""
+            class="content-container__img"
+          />
+          <img
+            src="./assets/clients.png"
+            alt=""
+            class="content-container__img"
+          />
+          <img
+            src="./assets/reviews.png"
+            alt=""
+            class="content-container__img"
+          />
+          <div class="search-screen" id="search-screen">
+            <div class="search-screen__container">
+              <div class="sma-container">
+                <h1 class="search__primary_heading">Similar accounts</h1>
+                <div class="sma-container__container">
+                  <!-- card will be inserted through javascript -->
+                </div>
+              </div>
+              <div class="quick-action__container">
+                <h1 class="search__primary_heading">Quick Actions</h1>
+                <ul>
+                  <li>Track new account</li>
+                  <li>Bult track accounts</li>
+                  <li>Manage accounts</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="./js/script.js" async defer></script>
+  </body>
+</html>
